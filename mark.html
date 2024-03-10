@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class marks{
+            constructor(Physics, Chemistry, Biology, Mathematics, Computer){
+                this.Physics = Physics
+                this.Chemistry = Chemistry
+                this.Biology = Biology
+                this.Mathematics = Mathematics
+                this.Computer = Computer
+            }
+
+            printMark(){
+                console.log(`Marks of Physics = ${this.Physics}`);
+                console.log(`Marks of Chemistry = ${this.Chemistry}`);
+                console.log(`Marks of Biology = ${this.Biology}`);
+                console.log(`Marks of Mathematics = ${this.Mathematics}`);
+                console.log(`Marks of Computer = ${this.Computer}`);
+            }
+
+            percentage(){
+                let sum = this.Physics + this.Chemistry + this.Biology + this.Mathematics + this.Computer;
+                let result = sum/5;
+
+                console.log(`result = ${result}`);
+                
+                if (result>=100) {
+                    console.log("Grade = A");
+                }
+                else if(result>=80){
+                    console.log("Grade = B");
+                }
+                else if(result>=70){
+                    console.log("Grade = C");
+                }
+                else if(result>=60){
+                    console.log("Grade = D");
+                }
+                else if(result>=50){
+                    console.log("Grade = E");
+                }
+                else if(result>=40){
+                    console.log("Grade = F");
+                }
+
+            }
+        }
+
+        let s1 = new marks(80,99,87,88,89)
+        s1.printMark()
+        s1.percentage()
+    </script>
+    
+</body>
+</html>
