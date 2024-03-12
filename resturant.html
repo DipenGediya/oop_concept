@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class resturant {
+            constructor(item) {
+                this.item = item;
+            }
+
+            total_item() {
+                this.item = [
+                    {
+                        name: "Dosa",
+                        price: 150,
+                        rating: 4.5,
+
+                    },
+                    {
+                        name: "Pizza",
+                        price: 250,
+                        rating: 3.9
+                    },
+                    {
+                        name: "Burger",
+                        price: 80,
+                        rating: 3,
+                    },
+                    {
+                        name: "Sandwish",
+                        price: 120,
+                        rating: 3.5
+                    },
+                    {
+                        name: "Drinks",
+                        price: 50,
+                        rating: 4.2
+                    }
+                ]
+
+                console.log("avilable items = ", this.item);
+
+                let sum = 0;
+
+                for (let i = 0; i < this.item.length; i++) {
+                    sum = sum + this.item[i].rating
+                }
+
+                let average = sum / this.item.length;
+
+                console.log(average);
+            }
+
+            add_item() {
+                this.item.push(
+                    {
+                        name: "Hot Dog",
+                        price: 99,
+                        rating: 2.9
+                    },
+                    {
+                        name: "Sides",
+                        price: 110,
+                        rating: 3,
+                    }
+                )
+
+                console.log("add items = ", this.item);
+
+                let sum = 0;
+
+                for (let i = 0; i < this.item.length; i++) {
+                    sum = sum + this.item[i].rating
+                }
+
+                let average = sum / this.item.length;
+
+                console.log(average);
+            }
+
+            remove_items() {
+                let remove = this.item.splice(1, 1);
+                console.log("remove item = ", remove);
+                console.log(this.item);
+
+                let sum = 0;
+                
+                for (let i = 0; i < this.item.length; i++) {
+                    sum = sum + this.item[i].rating
+                }
+
+                let average = sum / this.item.length;
+
+                console.log(average);
+            }
+        }
+
+        let i1 = new resturant();
+        i1.total_item();
+        i1.add_item();
+        i1.remove_items();
+    </script>
+
+</body>
+
+</html>
